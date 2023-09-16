@@ -407,7 +407,11 @@
 			<input id="Tunagem Full /S Desconto" type="checkbox" class="form-check-input" name="tunagem" value="350000"
 				onclick="calcular()">
 			<label class="form-check-label" title="MOTOR/FREIO/TRANSMISSÃO/SUSPENSÃO/TURBO"
-				for="Tunagem Full /S Desconto">Tunagem Full /S Desconto</label>
+				for="Tunagem Full /S Desconto">Tunagem Full /S Desconto</label><br>
+			<input id="Tunagem Full /S Desconto" type="checkbox" class="form-check-input" name="tunagem" value="300000"
+				onclick="calcular()">
+			<label class="form-check-label" title="MOTOR/FREIO//TURBO"
+				for="Tunagem Full /S Desconto">Tunagem /S Transmissão e /S Suspensão</label>
 			
 		</div>
 
@@ -415,6 +419,12 @@
 				<input id="Turbo" type="checkbox" class="form-check-input" name="tunagem" value="50000"
 					onclick="calcular()">
 				<label class="form-check-label" for="Turbo">Turbo</label>
+			</div>
+			
+			<div class="col col-md-12">
+				<input id="Refil Nitro" type="checkbox" class="form-check-input" name="tunagem" value="200000"
+					onclick="calcular()">
+				<label class="form-check-label" for="Turbo">Refil Nitro</label>
 			</div>
 		<hr>
 				<h3>
@@ -531,7 +541,6 @@
 				onclick="calcular()">
 			<label class="form-check-label" for="freio">Freio 3/3</label> 
 		</div>
-		<hr>
 
 	</div>
 
@@ -711,14 +720,16 @@
 			<label class="form-check-label" for="Decal">Decal</label>
 		</div>
 
-		<div class="col col-md-12">
+		<div class="col col-md-12" style="padding: 1.5px">
 			<input id="Pintura" type="checkbox" class="form-check-input" name="tunagem" value="10000"
 				onclick="calcular()">
 			<label class="form-check-label" for="Pintura">Pintura(Cromado/Fosco/Metal/Metalico)</label>
 		</div>
-
+		<br>
 	</div>
 	<div id="3" class="quadro form-control">
+		<div class="col col-md-12" style="padding: 2.5px">
+
 		<h3>
 			<font color="#000000"> 🧮 CALCULADORA</font>
 		</h3>
@@ -732,10 +743,16 @@
 		<h3>TUNAGENS (PROCEDIMENTOS SELECIONADOS):</h3>
 		<textarea rows="12" cols="50" style="resize: none;" readonly="true" maxlength="500" id="copy-text"
 			class="TextoTunagens form-control"></textarea>
-		<button class="btn btn-success" id="copy"> <i class="bi bi-clipboard"  style="padding: 4px"></i> Copiar</button>
+		<button class="btn btn-success" id="copy"> <i class="bi bi-clipboard"  ></i> Copiar</button>
+		<br>
+		<br>
+
 		<div class="alert alert-success" id="copiado" style="display: none;" role="alert">
 			Copiado com sucesso
 		</div>
+		</div>
+
+
 	</div>
 
 	</div>
