@@ -408,10 +408,7 @@
 				onclick="calcular()">
 			<label class="form-check-label" title="MOTOR/FREIO/TRANSMISSÃO/SUSPENSÃO/TURBO"
 				for="Tunagem Full /S Desconto">Tunagem Full /S Desconto</label>
-				<input id="Tunagem Full /C Desconto" type="checkbox" class="form-check-input" name="tunagem" value="310000"
-				onclick="calcular()">
-			<label class="form-check-label" title="MOTOR/FREIO/TRANSMISSÃO/SUSPENSÃO/TURBO"
-				for="Tunagem Full /C Desconto">Tunagem Full /C Desconto</label>
+			
 		</div>
 
 			<div class="col col-md-12">
@@ -428,25 +425,16 @@
 			<input id="Full Blindagem /S Desconto" type="checkbox" class="form-check-input" name="tunagem" value="1600000"
 				onclick="calcular()">
 			<label class="form-check-label" for="Blindagem">Full /S Desconto</label>
-			<input id="Full Blindagem /C Desconto" type="checkbox" class="form-check-input" name="tunagem" value="1440000"
-				onclick="calcular()">
-			<label class="form-check-label" for="Blindagem">Full /C Desconto</label>
-			</div>
-		<div class="col col-md-12">
+			
 
 			<input id="Blindagem Pneu  /S Desconto" type="checkbox" class="form-check-input" name="tunagem" value="1000000"
 				onclick="calcular()">
 			<label class="form-check-label" for="Blindagem Pneu"> Pneu  /S Desconto</label>
-			<input id="Blindagem Pneu  /C Desconto" type="checkbox" class="form-check-input" name="tunagem" value="900000"
-			onclick="calcular()">
-			<label class="form-check-label" for="Blindagem Pneu"> Pneu  /C Desconto</label>
-			<br>
+			
 			<input id="Blindagem Lataria /S Desconto"  type="checkbox" class="form-check-input" name="tunagem" value="600000"
 				onclick="calcular()">
 			<label class="form-check-label" for="Blindagem Pneu"> Lataria /S Desconto</label>
-			<input id="Blindagem Lataria /C Desconto" type="checkbox" class="form-check-input" name="tunagem" value="540000"
-				onclick="calcular()">
-			<label class="form-check-label" for="Blindagem Pneu">Lataria /C Desconto</label>
+			
 		</div>
 		<div class="col col-md-12">
 		<input id="Blindagem 20%" type="checkbox" class="form-check-input" name="tunagem" value="100000"
@@ -574,11 +562,11 @@
 				onclick="calcular()">
 			<label class="form-check-label" for="Suspensão">Suspensão 5/5</label>
 		</div>
-		<Hr>
+		<hr>
 		<h3>
 			<font color="#022d42">INSTALAR </font>
 		</h3>
-        <div class="col col-md-12">
+        <div class="col col-md-12" style="padding: 4px">
 			<input id="Neon " type="checkbox" class="form-check-input" name="tunagem" value="25000"
 				onclick="calcular()">
 			<label class="form-check-label" for="Neon">Neon</label>
@@ -587,7 +575,6 @@
 				onclick="calcular()">
 			<label class="form-check-label" for="Xenon">Xenon</label>
 		</div>
-		
 		<hr>
 
 		<h3>
@@ -605,11 +592,11 @@
 
 			<input id="Para-choque traseiro " type="checkbox" class="form-check-input" name="tunagem" value="10000"
 			onclick="calcular()">
-		<label class="form-check-label" for="Para-choque traseiro">Para-choque traseiro</label>
+			<label class="form-check-label" for="Para-choque traseiro">Para-choque traseiro</label>
 
-		<input id="Saias" type="checkbox" class="form-check-input" name="tunagem" value="10000"
-		onclick="calcular()">
-	<label class="form-check-label" for="Saias">Saias</label>
+			<input id="Saias" type="checkbox" class="form-check-input" name="tunagem" value="10000"
+			onclick="calcular()">
+			<label class="form-check-label" for="Saias">Saias</label>
 
 			<input id="Vidro Fume" type="checkbox" class="form-check-input" name="tunagem" value="10000"
 				onclick="calcular()">
@@ -730,10 +717,6 @@
 			<label class="form-check-label" for="Pintura">Pintura(Cromado/Fosco/Metal/Metalico)</label>
 		</div>
 
-		<br>
-		
-		<br>
-		<br>
 	</div>
 	<div id="3" class="quadro form-control">
 		<h3>
@@ -743,15 +726,13 @@
 		<h4>💸 VALOR: </h4> <input type="text" id="valor" name="valor" class="form-control" readonly="true" size="5"
 			style="margin-right:15px">
 		<button class="btn btn-danger" onclick="limpar()"><i class="bi bi-trash"></i> Limpar</button>
-		<Hr>
+		<button class="btn btn-primary" onclick="descontoParceria()"><i class="bi bi-check"></i> Desconto Parceria</button>
+		<button class="btn btn-primary" onclick="descontoDezPorcento()"><i class="bi bi-check"></i> Desconto 10%</button>
+		<input hidden id="valorTotal">
 		<h3>TUNAGENS (PROCEDIMENTOS SELECIONADOS):</h3>
-		<textarea rows="14" cols="50" style="resize: none;" readonly="true" maxlength="500" id="copy-text"
+		<textarea rows="12" cols="50" style="resize: none;" readonly="true" maxlength="500" id="copy-text"
 			class="TextoTunagens form-control"></textarea>
-			<br>
-
-		<br> 
-		<button class="btn btn-success" id="copy"> <i class="bi bi-clipboard"></i> Copiar</button>
-		<br>
+		<button class="btn btn-success" id="copy"> <i class="bi bi-clipboard"  style="padding: 4px"></i> Copiar</button>
 		<div class="alert alert-success" id="copiado" style="display: none;" role="alert">
 			Copiado com sucesso
 		</div>
@@ -837,6 +818,29 @@
 					Valor += parseInt(valores_tunganes[0]);
 
 				}
+				$("#valorTotal").val(Valor);
+				var valor_txt = document.getElementById("valor");
+				valor_txt.value = "R$" + Valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 });;
+			}
+		}
+		function descontoParceria(){
+			if ( $("#valorTotal").val() >= 350000){
+				var desconto= $("#valorTotal").val() * 0.15
+				var Valor = $("#valorTotal").val() - desconto
+				var valor_txt = document.getElementById("valor");
+				valor_txt.value = "R$" + Valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 });;
+			}
+		}
+		
+		function descontoDezPorcento(){
+			var tunagem = document.getElementById("Tunagem Full /S Desconto").checked;
+			if ( $("#valorTotal").val() >= 350000){
+				var desconto= $("#valorTotal").val() * 0.10
+				if(tunagem === true ) {
+					var Valor = $("#valorTotal").val() - desconto - 5000
+				} else
+				var Valor = $("#valorTotal").val() - desconto
+				
 				var valor_txt = document.getElementById("valor");
 				valor_txt.value = "R$" + Valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 });;
 			}
