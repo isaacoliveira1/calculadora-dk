@@ -522,6 +522,9 @@
 		</div>
 		<hr>
 
+		
+		<hr>
+
 		<h3>
 			<font color="#022d42">Freio</font>
 		</h3>
@@ -543,6 +546,31 @@
 
 
 	<div id="2" class="quadro form-control">
+		<h3>
+			<font color="#022d42">SUSPENSÃO</font>
+		</h3>
+		<div class="col col-md-12">
+			<input id="Suspensão 1/5" type="checkbox" class="form-check-input" name="tunagem" value="10000"
+				onclick="calcular()">
+			<label class="form-check-label" for="Suspensão">Suspensão 1/5</label>
+			
+			<input id="Suspensão 2/5" type="checkbox" class="form-check-input" name="tunagem" value="20000"
+				onclick="calcular()">
+			<label class="form-check-label" for="Suspensão">Suspensão 2/5</label>
+		
+			<input id="Suspensão 3/5" type="checkbox" class="form-check-input" name="tunagem" value="30000"
+				onclick="calcular()">
+			<label class="form-check-label" for="Suspensão">Suspensão 3/5</label>
+		</div>
+		<div class="col col-md-12">
+			<input id="Suspensão 4/5" type="checkbox" class="form-check-input" name="tunagem" value="50000"
+				onclick="calcular()">
+			<label class="form-check-label" for="Suspensão">Suspensão 4/5</label>
+		
+			<input id="Suspensão 5/5" type="checkbox" class="form-check-input" name="tunagem" value="70000"
+				onclick="calcular()">
+			<label class="form-check-label" for="Suspensão">Suspensão 5/5</label>
+		</div>
 		<h3>
 			<font color="#022d42">INSTALAR </font>
 		</h3>
@@ -699,20 +727,19 @@
 			<label class="form-check-label" for="Pintura">Pintura(Cromado/Fosco/Metal/Metalico)</label>
 		</div>
 
-		<br>
-		<br>
-		<br>
-		<br>
 		
+		<br>
+		<br>
 		<br>
 		<br>
 	</div>
 	<div id="3" class="quadro form-control">
-		<br>
-
 		<h3>
 			<font color="#000000"> 🧮 CALCULADORA</font>
 		</h3>
+		
+
+		
 		<h4>💸 VALOR: </h4> <input type="text" id="valor" name="valor" class="form-control" readonly="true" size="5"
 			style="margin-right:15px">
 		<button class="btn btn-danger" onclick="limpar()"><i class="bi bi-trash"></i> Limpar</button>
@@ -722,7 +749,9 @@
 			class="TextoTunagens form-control"></textarea>
 
 		<br> <button class="btn btn-success" id="copy"> <i class="bi bi-clipboard"></i> Copiar</button>
-
+		<br>
+		<br>
+		<br>
 		<div class="alert alert-success" id="copiado" style="display: none;" role="alert">
 			Copiado com sucesso
 		</div>
