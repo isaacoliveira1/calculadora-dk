@@ -88,7 +88,9 @@
 		tbody,
 		tfoot,
 		thead,
-
+		quadro label{
+			font-size: 20px;
+		}
 		tr {
 			border: 0;
 			outline: 0;
@@ -425,26 +427,26 @@
 
 			<input id="Full Blindagem /S Desconto" type="checkbox" class="form-check-input" name="tunagem" value="1600000"
 				onclick="calcular()">
-			<label class="form-check-label" for="Blindagem">Full Blindagem /S Desconto</label>
+			<label class="form-check-label" for="Blindagem">Full /S Desconto</label>
 			<input id="Full Blindagem /C Desconto" type="checkbox" class="form-check-input" name="tunagem" value="1440000"
 				onclick="calcular()">
-			<label class="form-check-label" for="Blindagem">Full Blindagem /C Desconto</label>
+			<label class="form-check-label" for="Blindagem">Full /C Desconto</label>
 			</div>
 		<div class="col col-md-12">
 
 			<input id="Blindagem Pneu  /S Desconto" type="checkbox" class="form-check-input" name="tunagem" value="1000000"
 				onclick="calcular()">
-			<label class="form-check-label" for="Blindagem Pneu">Blindagem Pneu  /S Desconto</label>
+			<label class="form-check-label" for="Blindagem Pneu"> Pneu  /S Desconto</label>
 			<input id="Blindagem Pneu  /C Desconto" type="checkbox" class="form-check-input" name="tunagem" value="900000"
 			onclick="calcular()">
-			<label class="form-check-label" for="Blindagem Pneu">Blindagem Pneu  /C Desconto</label>
+			<label class="form-check-label" for="Blindagem Pneu"> Pneu  /C Desconto</label>
 			<br>
 			<input id="Blindagem Lataria /S Desconto"  type="checkbox" class="form-check-input" name="tunagem" value="600000"
 				onclick="calcular()">
-			<label class="form-check-label" for="Blindagem Pneu">Blindagem Lataria /S Desconto</label>
+			<label class="form-check-label" for="Blindagem Pneu"> Lataria /S Desconto</label>
 			<input id="Blindagem Lataria /C Desconto" type="checkbox" class="form-check-input" name="tunagem" value="540000"
 				onclick="calcular()">
-			<label class="form-check-label" for="Blindagem Pneu">Blindagem Lataria /C Desconto</label>
+			<label class="form-check-label" for="Blindagem Pneu">Lataria /C Desconto</label>
 		</div>
 		<div class="col col-md-12">
 		<input id="Blindagem 20%" type="checkbox" class="form-check-input" name="tunagem" value="100000"
@@ -572,6 +574,7 @@
 				onclick="calcular()">
 			<label class="form-check-label" for="Suspensão">Suspensão 5/5</label>
 		</div>
+		<Hr>
 		<h3>
 			<font color="#022d42">INSTALAR </font>
 		</h3>
@@ -637,7 +640,7 @@
 			<input id="capô " type="checkbox" class="form-check-input" name="tunagem" value="10000"
 				onclick="calcular()">
 			<label class="form-check-label" for="capô">Capô</label>
-	
+			<br>
 			<input id="Para-Lama " type="checkbox" class="form-check-input" name="tunagem" value="10000"
 				onclick="calcular()">
 			<label class="form-check-label" for="Para-Lama">Para-Lama</label>
@@ -661,11 +664,10 @@
 			<input id="Interior Ponteiro" type="checkbox" class="form-check-input" name="tunagem" value="10000"
 				onclick="calcular()">
 			<label class="form-check-label" for="Interior Ponteiro">Interior Ponteiro</label>
-			<br>
 			<input id="Interior Janela" type="checkbox" class="form-check-input" name="tunagem" value="10000"
 				onclick="calcular()">
 			<label class="form-check-label" for="Interior Janela">Interior Janela</label>
-		
+		<br>
 			<input id="Interior Banco" type="checkbox" class="form-check-input" name="tunagem" value="10000"
 				onclick="calcular()">
 			<label class="form-check-label" for="Interior Banco">Interior Banco</label>
@@ -674,10 +676,10 @@
 			<input id="Mudar Cor Neon " type="checkbox" class="form-check-input" name="tunagem" value="10000"
 				onclick="calcular()">
 			<label class="form-check-label" for="Cor Neon">Mudar Cor Neon</label>
-			<br>
 			<input id="Mudar Cor Xenon " type="checkbox" class="form-check-input" name="tunagem" value="10000"
 				onclick="calcular()">
 			<label class="form-check-label" for="Mudar Cor Xenon">Mudar Cor Xenon</label>
+			<br>
 
 
 			<input id="Pneu" type="checkbox" class="form-check-input" name="tunagem" value="10000" onclick="calcular()">
@@ -731,27 +733,22 @@
 		
 		<br>
 		<br>
-		<br>
-		<br>
 	</div>
 	<div id="3" class="quadro form-control">
 		<h3>
 			<font color="#000000"> 🧮 CALCULADORA</font>
 		</h3>
-		
-
-		
+				
 		<h4>💸 VALOR: </h4> <input type="text" id="valor" name="valor" class="form-control" readonly="true" size="5"
 			style="margin-right:15px">
 		<button class="btn btn-danger" onclick="limpar()"><i class="bi bi-trash"></i> Limpar</button>
-
+		<Hr>
 		<h3>TUNAGENS (PROCEDIMENTOS SELECIONADOS):</h3>
-		<textarea rows="10" cols="50" style="resize: none;" readonly="true" maxlength="500" id="copy-text"
+		<textarea rows="14" cols="50" style="resize: none;" readonly="true" maxlength="500" id="copy-text"
 			class="TextoTunagens form-control"></textarea>
 
-		<br> <button class="btn btn-success" id="copy"> <i class="bi bi-clipboard"></i> Copiar</button>
-		<br>
-		<br>
+		<br> 
+		<button class="btn btn-success" id="copy"> <i class="bi bi-clipboard"></i> Copiar</button>
 		<br>
 		<div class="alert alert-success" id="copiado" style="display: none;" role="alert">
 			Copiado com sucesso
